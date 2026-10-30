@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.dropdown {
+  position: relative;
+  width: 250px;
+}
+
+/* ---------- el boton ---------- */
+.boton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  font-size: 18px;
+  background: white;
+  border: 2px solid #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ---------- la lista ---------- */
+.lista {
+  display: none; 
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  border: 2px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.dropdown.abierto .lista {
+  display: block;
+}
+
+.lista li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+
+.lista li:last-child {
+  border-bottom: none; 
+}
+
+.lista li:hover {
+  background: #eee;
+}
+
+/* ---------- item seleccionado ---------- */
+.lista li.seleccionado {
+  background: #ddd;
+  font-weight: bold;
+}
+
+/* el circulo negro con el check, hecho con ::after */
+.lista li.seleccionado::after {
+  content: "✔";
+  float: right;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 22px;
+}
